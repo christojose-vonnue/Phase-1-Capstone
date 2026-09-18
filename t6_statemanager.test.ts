@@ -30,6 +30,15 @@ function reducer(state: State, action: Action): State {
 describe("Type-safe State Manager", () => {
 
     it("dispatches typed actions and updates state", () => {
+        /**
+ * Creates a type-safe store for application state and actions.
+ *
+ * @typeParam S - The shape of the application state.
+ * @typeParam A - The action type handled by the store.
+ * @param reducer - Function responsible for producing the next state.
+ * @param initialState - The initial application state.
+ * @returns A store that manages state using the supplied reducer and actions.
+ */
         const store = createStore<State, Action>(
             { count: 0 },
             reducer

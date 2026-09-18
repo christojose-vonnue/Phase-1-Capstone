@@ -2,6 +2,15 @@
 import { ACTION_TYPES } from '@utils/constants';
 import type { Action,AppState } from "./reducer";
 
+/**
+ * Represents dynamic parameters extracted from a route.
+ *
+ * Each key is a parameter name and each value is its
+ * corresponding value from the current URL.
+ *
+ * Example:
+ * /recipes/:id → { id: "123" }
+ */
 export type RouteParams = Record<string, string>;
 
 type MatchResult = {

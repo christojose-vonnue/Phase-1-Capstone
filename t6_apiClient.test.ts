@@ -1,6 +1,9 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { ApiClient } from "./t6_apiClient";
-
+type User = {
+    id: number;
+    name: string;
+}
 describe("ApiClient", () => {
     afterEach(() => {
         vi.restoreAllMocks();

@@ -34,10 +34,10 @@ type DetailPageProps = {
 
 type SettingsPageProps = {
     state: AppState;
-    router: Router;
+    router?: Router;
     store: PageStore;
 };
-export function renderHomePage({ state, router }:HomePageProps) : HTMLElement {
+export function renderHomePage({ router }:HomePageProps) : HTMLElement {
 
     const main = document.createElement("main");
     main.className = "page page-home";
@@ -437,7 +437,7 @@ export function renderDetailPage({ state, params, router }:DetailPageProps) :HTM
 }
 
 
-export function renderSettingsPage({ state, router, store }:SettingsPageProps) : HTMLElement {
+export function renderSettingsPage({ state, store }:SettingsPageProps) : HTMLElement {
 
     const main = document.createElement("main");
     main.className = "page page-settings";

@@ -5,7 +5,7 @@ import type { AppState, Action } from "../reducer";
 
 describe("createStore", () => {
     it("returns the initial state", () => {
-        const reducer = (state: AppState, action: Action): AppState => state;
+        const reducer = (state: AppState): AppState => state;
 
         const store = createStore(reducer, INITIAL_STATE);
 
@@ -86,7 +86,7 @@ describe("createStore", () => {
 });
 
   it("does not notify subscribers when the reducer returns the same state", () => {
-    const reducer = (state: AppState, action: Action): AppState => {
+    const reducer = (state: AppState): AppState => {
         return state;
     };
 

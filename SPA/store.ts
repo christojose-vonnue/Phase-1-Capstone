@@ -50,7 +50,7 @@ export function createStore(reducer : Reducer, initialState : AppState,middlewar
     // Build middleware chain
     const chain = middlewares.map( (middleware: Middleware)  => middleware(middlewareAPI) ); 
     
-    let dispatch = chain.reduceRight( (next, middleware) => middleware(next), baseDispatch );
+    const dispatch = chain.reduceRight( (next, middleware) => middleware(next), baseDispatch );
 
 
     return{

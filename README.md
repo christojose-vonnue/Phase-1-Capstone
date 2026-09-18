@@ -21,9 +21,7 @@ The application demonstrates how TypeScript can be applied to a real frontend ap
 
 ## Live Demo
 
-A live deployment is not currently configured.
-
-The application can be run and tested locally using the project tooling described below.
+A live deployment at : https://christojose-vonnue.github.io/Phase-1-Capstone/
 
 ## Tech Stack
 

@@ -1,0 +1,63 @@
+:root {
+    --background: white;
+    --text: black;
+    --button-background: black;
+    --button-text: white;
+    --border: black;
+}
+
+:root.dark {
+    --background: black;
+    --text: white;
+    --button-background: white;
+    --button-text: black;
+    --border: white;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+}
+
+button {
+    margin: 5px;
+    background: var(--button-background);
+    color: var(--button-text);
+    border: 1px solid var(--border);
+}
+
+.page {
+    animation: pageFadeIn 0.3s ease-in;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.navbar a:first-child {
+    margin-right: auto;
+    font-weight: bold;
+}
